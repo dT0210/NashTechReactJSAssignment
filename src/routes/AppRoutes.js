@@ -1,10 +1,12 @@
 import { useRoutes } from "react-router-dom"
-import Posts from "../pages/Posts"
-import Login from "../pages/Login"
+import Books from "../pages/Books/Books"
 import Profile from "../pages/Profile"
 import Home from "../pages/Home"
 import RequiredAuth from "../components/RequiredAuth"
 import React, { Suspense } from "react"
+import BookDetails from "../pages/Books/BookDetails"
+import AddBook from "../pages/Books/AddBook"
+import EditBook from "../pages/Books/EditBook"
 
 const LoginLazy = React.lazy(
     () => import("../pages/Login")
@@ -14,8 +16,22 @@ const AppRoutes = () => {
     const elements = useRoutes(
         [
             {path: '/', element: <Home/>},
-            {path: '/posts', element: <Posts/>},
-            // {path: '/posts:id', element: <PostDetails/>},
+            {
+                path: '/books', 
+                element: <Books/>
+            },
+            {
+                path: '/books/:id',
+                element: <BookDetails/>
+            },
+            {
+                path: '/books/add',
+                element: <AddBook/>
+            },
+            {
+                path: '/books/edit/:id',
+                element: <EditBook/>
+            },
             {
                 path: '/login', 
                 element: 

@@ -3,7 +3,7 @@ import AppRoutes from "../routes/AppRoutes";
 
 const Layout = () => {
     return (
-        <div>
+        <div className="h-[100vh]">
             <Nav/>
             <AppRoutes/>
         </div>

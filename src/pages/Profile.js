@@ -1,6 +1,6 @@
 const Profile = () => {
     return (
-        <div>
+        <div className="mt-[80px]">
             Profile
         </div>
     );
